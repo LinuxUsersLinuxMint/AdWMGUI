@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Copyright© 2023-2024 LinuxUsersLinuxMint
 AdWMGUI Tüm Hakları GPL(Genel Kamu Lisansı) altında korunmaktadır.
 AdWMGUI All Rights Reserved under the GPL(General Public License).
