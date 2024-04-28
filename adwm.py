@@ -7,18 +7,16 @@ A Copy of This Software is published on GITHUB To view: https://github.com/Linux
 
 import AdWMFuncLib.Systemclean
 import AdWMFuncLib.Systemrepair
-import AdWMFuncLib.about_help.about
-import AdWMFuncLib.about_help.help
+import AdWMFuncLib.About.about
 from tkinter import *
 from _tkinter import TclError
 from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
 from tkinter import Tk
-
 window = Tk()
 window.title("AdWMGUI (Advanced Windows Manager GUI)")
-window.geometry("385x30")
+window.geometry("497x30")
 window.resizable(FALSE,FALSE)
 systemclean = Button(window, text="SystemClean", command=AdWMFuncLib.Systemclean.OpenCleanmgr)
 systemclean.pack(side=LEFT)
@@ -26,8 +24,6 @@ advancedsystemclean = Button(window, text="DISM WinSxs Folder clean", command=Ad
 advancedsystemclean.pack(side=LEFT)
 systemrepair = Button(window, text="SystemRepair", command=AdWMFuncLib.Systemrepair.RepairSystem)
 systemrepair.pack(side=LEFT)
-about = Button(window, text="About", command=AdWMFuncLib.about_help.about.AboutMsgBox)
+about = Button(window, text="About", command=AdWMFuncLib.About.about.AboutMsgBox)
 about.pack(side=LEFT)
-help = Button(window, text="Help", command=AdWMFuncLib.about_help.help.HelpMsgBox)
-help.pack(side=LEFT)
 window.mainloop()
