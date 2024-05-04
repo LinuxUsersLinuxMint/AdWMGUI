@@ -7,22 +7,23 @@ A Copy of This Software is published on GITHUB To view: https://github.com/Linux
 
 import os, time
 from tkinter import *
-from _tkinter import TclError
 from tkinter import messagebox
-from tkinter import filedialog
-from tkinter import simpledialog
-from tkinter import Tk
 
 def OpenCleanmgr():
     os.system("cleanmgr.exe")
 
 def AdvancedCleanup():
-    messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup...")
-    time.sleep(2)
-    messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup 1/2... (DISM.exe /Online /Cleanup-Image /AnalyzeComponentStore)")
-    os.system("DISM.exe /Online /Cleanup-Image /AnalyzeComponentStore")
-    time.sleep(2)
-    messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup 2/2... (DISM.exe /Online /Cleanup-Image /StartComponentCleanup)")
-    os.system("DISM.exe /Online /Cleanup-Image /StartComponentCleanup")
-    time.sleep(2)
-    messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup done!")
+    if messagebox.askyesno("AdWMGUI", "Show messages?") == True:
+        messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup...")
+        time.sleep(2)
+        messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup 1/2... (DISM.exe /Online /Cleanup-Image /AnalyzeComponentStore)")
+        os.system("DISM.exe /Online /Cleanup-Image /AnalyzeComponentStore")
+        time.sleep(2)
+        messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup 2/2... (DISM.exe /Online /Cleanup-Image /StartComponentCleanup)")
+        os.system("DISM.exe /Online /Cleanup-Image /StartComponentCleanup")
+        time.sleep(2)
+        messagebox.showinfo("AdvancedCleanup", "Advanced Cleanup done!")
+    else:
+        os.system("DISM.exe /Online /Cleanup-Image /AnalyzeComponentStore")
+        time.sleep(2)
+        os.system("DISM.exe /Online /Cleanup-Image /StartComponentCleanup")

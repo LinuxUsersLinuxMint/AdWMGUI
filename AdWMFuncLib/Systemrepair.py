@@ -7,15 +7,10 @@ A Copy of This Software is published on GITHUB To view: https://github.com/Linux
 
 import os, time
 from tkinter import *
-from _tkinter import TclError
 from tkinter import messagebox
-from tkinter import filedialog
-from tkinter import simpledialog
-from tkinter import Tk
 
 def RepairSystem():
-    message_level = int(input('Enter Message Level (0, 1): '))
-    if message_level == 1:
+    if messagebox.askyesno("AdWMGUI", "Show messages?") == True:
         messagebox.showinfo("RepairSystem", "Repairing System...")
         time.sleep(2)
         messagebox.showinfo("RepairSystem", "Repair System 1/4... (sfc /scannow)")
@@ -31,7 +26,7 @@ def RepairSystem():
         os.system("dism /Online /Cleanup-Image /RestoreHealth")
         time.sleep(2)
         messagebox.showinfo("RepairSystem", "Reapiring System done!")
-    elif message_level == 0:
+    else:
         os.system("sfc /scannow")
         time.sleep(2)
         os.system("dism /Online /Cleanup-Image /CheckHealth")
