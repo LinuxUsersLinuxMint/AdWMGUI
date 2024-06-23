@@ -8,4 +8,4 @@ Türkçe:
 English:
 
 * AdWMGUI software will be released for download from github on 03/01/2024 (March 1, 2024).
-* To download AdWMGUI from LinuxUsersLinuxMint website: https://linuxuserslinuxmint.github.io/Contents/adwmgui/STEP_2/EN/index.html
+* AdWMGUI software was released for download from github on 03/01/2024 (March 1, 2024). 

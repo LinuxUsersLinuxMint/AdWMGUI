@@ -2,16 +2,17 @@
 """ Copyright© 2023-2024 LinuxUsersLinuxMint
 AdWMGUI Tüm Hakları GPL(Genel Kamu Lisansı) altında korunmaktadır.
 AdWMGUI All Rights Reserved under the GPL(General Public License).
-Bu Yazılımın Bir Kopyası GİTHUB da yayınlanmaktadır Görüntülemek için: https://github.com/LinuxUsersLinuxMint/AdWMGUI
-A Copy of This Software is published on GITHUB To view: https://github.com/LinuxUsersLinuxMint/AdWMGUI """
+Bu Yazılımın Bir Kopyası GİTHUB da yayınlanmaktadır Görüntülemek için: https://github.com/LinuxUsersLinuxMint/LinuxUsersLinuxMint
+A Copy of This Software is published on GITHUB To view: https://github.com/LinuxUsersLinuxMint/LinuxUsersLinuxMint """
 
 from tkinter import *
 from tkinter import messagebox
+from AdWMGUILang.lang import *
 import os
 
 def ShutdownPC():
-    if messagebox.askyesno("AdWMGUI", "Are you sure you want to shutdown your computer?") == True:
-        userTime = input("Enter time in seconds: ")
-        os.system("shutdown /s /t {0}", format(userTime))
+    if messagebox.askyesno(adwmgui_txt_title, shutdownpc_askyesno_txt_title) == True:
+        userTime = str(input(usertm_title))
+        os.system("cmd.exe /c shutdown -s -t {0}". format(userTime))
     else:
-        print("Shutdown cancelled.")
+        print(shutdownpc_askyesno_cancel_txt_title)
