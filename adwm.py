@@ -20,7 +20,7 @@ if platform.system() == "Windows":
     window.title(windows_title)
     icon = PhotoImage(file="Icon/adwmgui_icon.png")
     window.iconphoto(False, icon)
-    window.geometry("700x30")
+    window.geometry("830x30")
     window.resizable(FALSE,FALSE)
     systemclean = Button(window, text=system_clean_title , command=AdWMFuncLib.Systemclean.OpenCleanmgr)
     systemclean.pack(side=LEFT)
@@ -32,6 +32,8 @@ if platform.system() == "Windows":
     about.pack(side=LEFT)
     shutdownpc = Button(window, text=shutdownpc_title, command=AdWMFuncLib.ShutdownPC.shutdownpc.ShutdownPC)
     shutdownpc.pack(side=LEFT)
+    all_operations_shutdownpc = Button(window, text=all_operations_shutdownpc_title, command=AdWMFuncLib.ShutdownPC.shutdownpc.all_operations_ShutdownPC)
+    all_operations_shutdownpc.pack(side=LEFT)
     window.mainloop()
 else:
     messagebox.showerror(adwmgui_platform_error_title_txt, adwmgui_platform_error_txt)
