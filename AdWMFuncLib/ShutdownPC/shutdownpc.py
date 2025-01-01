@@ -10,6 +10,7 @@ from tkinter import messagebox
 from AdWMGUILang.lang import *
 from AdWMFuncLib.Systemrepair import *
 from AdWMFuncLib.Systemclean import *
+from PyAppDevKit.pyappdevkit import *
 import os
 
 def ShutdownPC():
@@ -21,13 +22,13 @@ def ShutdownPC():
 
 def all_operations_ShutdownPC():
     if messagebox.askyesno(adwmgui_txt_title, shutdownpc_askyesno_txt_title) == True:
-        time.sleep(0.5)
+        time(0.5)
         OpenCleanmgr()
-        time.sleep(0.5)
+        time(0.5)
         AdvancedCleanup()
-        time.sleep(0.5)
+        time(0.5)
         RepairSystem()
-        time.sleep(0.5)
+        time(0.5)
         ShutdownPC()
     else:
         print(shutdownpc_askyesno_cancel_txt_title)
