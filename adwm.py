@@ -20,7 +20,7 @@ if platform.system() == "Windows":
     window.title(windows_title)
     icon = PhotoImage(file="Icon/adwmgui_icon.png")
     window.iconphoto(False, icon)
-    window.geometry("830x30")
+    window.geometry("800x30")
     window.resizable(FALSE,FALSE)
     systemclean = Button(window, text=system_clean_title , command=AdWMFuncLib.Systemclean.OpenCleanmgr)
     systemclean.pack(side=LEFT)
