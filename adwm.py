@@ -10,8 +10,6 @@ import AdWMFuncLib.Systemclean
 import AdWMFuncLib.Systemrepair
 import AdWMFuncLib.About.about
 import AdWMFuncLib.ShutdownPC.shutdownpc
-from tkinter import *
-from tkinter import Tk
 from AdWMGUILang.lang import *
 import platform
 

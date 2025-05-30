@@ -5,9 +5,39 @@ AdWMGUI All Rights Reserved under the GPL(General Public License).
 Bu Yazılımın Bir Kopyası GitHub da yayınlanmaktadır Görüntülemek için: https://github.com/LinuxUsersLinuxMint/AdWMGUI
 A Copy of This Software is published on GitHub To view: https://github.com/LinuxUsersLinuxMint/AdWMGUI """
 
-userLang = input('Enter Language (EN, TR): ')
+from tkinter import *
+from tkinter import font
 
-if userLang == "en" or userLang == "EN" or userLang == "English":
+def set_tr():
+    global userLang
+    userLang = "TR"
+    lang.destroy()
+
+def set_en():
+    global userLang
+    userLang = "EN"
+    lang.destroy()
+
+lang = Tk()
+lang.title("Select Language")
+lang.iconphoto(False, PhotoImage(file="Icon/adwmgui_icon.png"))
+lang.geometry("200x100")
+lang.resizable(FALSE,FALSE)
+lang_label = Label(lang, text="Select Language")
+lang_label.pack()
+btnfrm = Frame(lang)
+btnfrm.pack()
+lang_button_tr = Button(btnfrm, text="Türkçe",command=set_tr,width=10)
+lang_button_tr.pack(side=LEFT)
+lang_button_en = Button(btnfrm, text="English",command=set_en,width=10)
+lang_button_en.pack(side=LEFT)
+exit_button = Button(lang, text="Exit",command=lang.destroy,width=10)
+exit_button.pack()
+adwmgui_version_label = Label(lang,text="AdWMGUI v1.6", font=("Arial",10,"bold"))
+adwmgui_version_label.pack()
+lang.mainloop()
+
+if userLang == "EN":
     windows_title = "AdWMGUI (Advanced Windows Manager GUI)"
     system_clean_title = "SystemClean"
     advanced_system_clean_title = "DISM WinSxS Folder clean"
@@ -15,16 +45,19 @@ if userLang == "en" or userLang == "EN" or userLang == "English":
     about_title = "About"
     shutdownpc_title = "ShutdownPC"
     all_operations_shutdownpc_title = "Do all operations and then shut down the computer"
-    about_level_title = "Enter About Level (0, 1, 2, 3): "
-    about_txt_title = "About"
-    about_zero_level_title = "AdWMGUI (Advanced Windows Manager GUI) version: 1.5"
-    about_one_level_title = "AdWMGUI (Advanced Windows Manager GUI) version: 1.5, version_type: Untested version (for GUI and Program), licence: GPL2"
-    about_txt_two_title = "About Licence"
-    about_two_level_title = "AdWMGUI (Advanced Windows Manager GUI), Licence type: GPL, Licence Version: 2, Licence Name: GPL2"
-    about_txt_three_title = "Manufacturer Information"
-    about_three_level_title = "Program Manufacturer: LinuxUsersLinuxMint, Organization: LinuxUsersLinuxMint, Organization Website: https://linuxuserslinuxmint.github.io/"
-    error_title = "Error"
-    error_txt_title = "Error: Unknown About Level"
+    app_information_title = "App knowledge:\n"
+    app_name_txt = "App name: AdWMGUI (Advanced Windows Manager GUI)"
+    app_version_txt = "Version: 1.6"
+    app_version_type_txt = "Version type: Stable version"
+    licence_information_title = "Licence information:\n"
+    licence_name_txt = "Licence name: GPL"
+    licence_version_txt = "Licence version: 2"
+    full_licence_name_txt = "Full licence name: GPL2 (General Public License)"
+    manufacturer_information_title = "Manufacturer information:\n"
+    manufacturer_name_txt = "Manufacturer name: LinuxUsersLinuxMint"
+    organization_txt = "Organization: LinuxUsersLinuxMint"
+    website_information_title = "Website information:\n"
+    organization_website_txt = "Organization website: https://linuxuserslinuxmint.github.io/"
     adwmgui_txt_title = "AdWMGUI"
     shutdownpc_askyesno_txt_title = "Are you sure you want to shutdown your computer?"
     shutdownpc_askyesno_cancel_txt_title = "Shutdown cancelled."
@@ -44,7 +77,7 @@ if userLang == "en" or userLang == "EN" or userLang == "English":
     usertm_title = "After how many seconds should the computer be shut down?: "
     adwmgui_platform_error_title_txt = "AdWMGUI platform system error"
     adwmgui_platform_error_txt = "Sorry! You do not meet the Platform system requirement to use the AdWMGUI application."
-if userLang == "tr" or userLang == "TR" or userLang == "Türkçe":
+if userLang == "TR":
     windows_title = "AdWMGUI (Gelişmiş Windows Yönetimi GUI)"
     system_clean_title = "Sistem Temizliği"
     advanced_system_clean_title = "DISM WinSxS Klasör temizliği"
@@ -52,16 +85,19 @@ if userLang == "tr" or userLang == "TR" or userLang == "Türkçe":
     about_title = "Hakkımda"
     shutdownpc_title = "Bilgisayarı Kapat"
     all_operations_shutdownpc_title = "Tüm işlemleri yap ardından Bilgisayarı kapat"
-    about_level_title = "Hakkımda seviyesi gir (0, 1, 2, 3): "
-    about_txt_title = "Hakkımda"
-    about_zero_level_title = "AdWMGUI (Gelişmiş Windows Yönetimi GUI) sürüm: 1.5"
-    about_one_level_title = "AdWMGUI (Gelişmiş Windows Yönetimi GUI) sürüm: 1.5, sürüm tipi: Test edilmemiş sürüm (GUI ve Program için), Lisans: GPL2"
-    about_txt_two_title = "Lisans Hakkında"
-    about_two_level_title = "AdWMGUI (Gelişmiş Windows Yönetimi GUI), Lisans Türü: GPL, Lisans sürümü: 2, Lisans adı: GPL2"
-    about_txt_three_title = "Üretici Bilgisi"
-    about_three_level_title = "Program üreticisi: LinuxUsersLinuxMint, Organizasyon: LinuxUsersLinuxMint, Organizasyon Web sitesi: https://linuxuserslinuxmint.github.io/"
-    error_title = "Hata"
-    error_txt_title = "Hata: Bilinmeyen/Geçersiz hakkımda seviyesi"
+    app_information_title = "Uygulama bilgisi:\n"
+    app_name_txt = "Uygulama adı: AdWMGUI (Advanced Windows Manager GUI)"
+    app_version_txt = "Sürüm: 1.6"
+    app_version_type_txt = "Sürüm tipi: Stabil sürüm"
+    licence_information_title = "Lisans bilgisi:\n"
+    licence_name_txt = "Lisans adı: GPL"
+    licence_version_txt = "Lisans sürümü: 2"
+    full_licence_name_txt = "Tam lisans ismi: GPL2 (General Public License)"
+    manufacturer_information_title = "Üretici bilgisi:\n"
+    manufacturer_name_txt = "Program üreticisi: LinuxUsersLinuxMint"
+    organization_txt = "Organizasyon: LinuxUsersLinuxMint"
+    website_information_title = "Web site bilgisi:\n"
+    organization_website_txt = "Organizasyon web sitesi: https://linuxuserslinuxmint.github.io/"
     adwmgui_txt_title = "AdWMGUI"
     shutdownpc_askyesno_txt_title = "Bilgisayarı kapatmak istediğinizden emin misiniz?"
     shutdownpc_askyesno_cancel_txt_title = "Kapatma iptal edildi."

@@ -5,13 +5,9 @@ AdWMGUI All Rights Reserved under the GPL(General Public License).
 Bu Yazılımın Bir Kopyası GitHub da yayınlanmaktadır Görüntülemek için: https://github.com/LinuxUsersLinuxMint/AdWMGUI
 A Copy of This Software is published on GitHub To view: https://github.com/LinuxUsersLinuxMint/AdWMGUI """
 
-from tkinter import *
 from tkinter import messagebox
-from AdWMGUILang.lang import *
 from AdWMFuncLib.Systemrepair import *
 from AdWMFuncLib.Systemclean import *
-from PyAppDevKit.pyappdevkit import *
-import os
 
 def ShutdownPC():
     if messagebox.askyesno(adwmgui_txt_title, shutdownpc_askyesno_txt_title) == True:

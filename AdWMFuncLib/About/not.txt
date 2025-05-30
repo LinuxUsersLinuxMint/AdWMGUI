@@ -1,0 +1,20 @@
+Uygulama bilgisi:
+
+Uygulama adı: AdWMGUI (Advanced Windows Manager GUI)
+Sürüm: 1.6
+Sürüm tipi: test edilmemiş version
+
+Lisans bilgisi:
+
+Lisans adı: GPL
+Lisans sürümü: 2
+Tam lisans ismi: GPL2 (General Public License)
+
+Üretici bilgisi:
+
+Program üreticisi: LinuxUsersLinuxMint
+Organizasyon: LinuxUsersLinuxMint
+
+Web site bilgisi:
+
+Organizasyon web sitesi: https://linuxuserslinuxmint.github.io/
