@@ -33,7 +33,7 @@ lang_button_en = Button(btnfrm, text="English",command=set_en,width=10)
 lang_button_en.pack(side=LEFT)
 exit_button = Button(lang, text="Exit",command=lang.destroy,width=10)
 exit_button.pack()
-adwmgui_version_label = Label(lang,text="AdWMGUI v1.6", font=("Arial",10,"bold"))
+adwmgui_version_label = Label(lang,text="AdWMGUI v1.7", font=("Arial",10,"bold"))
 adwmgui_version_label.pack()
 lang.mainloop()
 
@@ -43,11 +43,11 @@ if userLang == "EN":
     advanced_system_clean_title = "DISM WinSxS Folder clean"
     system_repair_title = "SystemRepair"
     about_title = "About"
-    shutdownpc_title = "ShutdownPC"
+    shutdownpc_title = "Shutdown PC"
     all_operations_shutdownpc_title = "Do all operations and then shut down the computer"
     app_information_title = "App knowledge:\n"
     app_name_txt = "App name: AdWMGUI (Advanced Windows Manager GUI)"
-    app_version_txt = "Version: 1.6"
+    app_version_txt = "Version: 1.7"
     app_version_type_txt = "Version type: Stable version"
     licence_information_title = "Licence information:\n"
     licence_name_txt = "Licence name: GPL"
@@ -77,6 +77,10 @@ if userLang == "EN":
     usertm_title = "After how many seconds should the computer be shut down?: "
     adwmgui_platform_error_title_txt = "AdWMGUI platform system error"
     adwmgui_platform_error_txt = "Sorry! You do not meet the Platform system requirement to use the AdWMGUI application."
+    quick_access_title = "Quick Access:"
+    private_time_title = "Private time (second):"
+    private_time_button_title = "Shutdown PC"
+    all_operations_shutdownpc_title_ = "Do all operations and then shut down the computer:"
 if userLang == "TR":
     windows_title = "AdWMGUI (Gelişmiş Windows Yönetimi GUI)"
     system_clean_title = "Sistem Temizliği"
@@ -87,7 +91,7 @@ if userLang == "TR":
     all_operations_shutdownpc_title = "Tüm işlemleri yap ardından Bilgisayarı kapat"
     app_information_title = "Uygulama bilgisi:\n"
     app_name_txt = "Uygulama adı: AdWMGUI (Advanced Windows Manager GUI)"
-    app_version_txt = "Sürüm: 1.6"
+    app_version_txt = "Sürüm: 1.7"
     app_version_type_txt = "Sürüm tipi: Stabil sürüm"
     licence_information_title = "Lisans bilgisi:\n"
     licence_name_txt = "Lisans adı: GPL"
@@ -117,3 +121,7 @@ if userLang == "TR":
     usertm_title = "Bilgisayar kaç saniye sonra kapatılsın?: "
     adwmgui_platform_error_title_txt = "AdWMGUI platform sistem hatası"
     adwmgui_platform_error_txt = "Üzgünüm! AdWMGUI uygulamasını kullanmak için Platform sistem gereksinimini karşılamıyorsunuz."
+    quick_access_title = "Hızlı erişim:"
+    private_time_title = "Özel zaman (saniye):"
+    private_time_button_title = "Bilgisayarı kapat"
+    all_operations_shutdownpc_title_ = "Tüm islemleri yap ardından bilgisayarı kapat:"
