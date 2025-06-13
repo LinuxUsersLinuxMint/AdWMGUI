@@ -10,7 +10,7 @@
 > 📦 Initial release: **AdWMGUI 1.0 (GUI Beta)**   
 > 📦 Current version: **AdWMGUI 1.7**   
 > 📦 Next release: **AdWMGUI 1.8**   
-> ⏳ Next release status: **Under development...** 
+> ⏳ Next release status: **Under development...**   
 > 🛠️ Next release type: **Big update** 
 
 ---
