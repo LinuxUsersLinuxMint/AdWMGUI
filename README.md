@@ -1,11 +1,25 @@
-AdWMGUI (Advanced Windows Manager GUI)
+# AdWMGUI (Advanced Windows Manager GUI)
 
-Türkçe:
+![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)
+![Release Date](https://img.shields.io/badge/Release%20Date-2024--03--01-brightgreen)
 
-* AdWMGUI yazılımı 03/01/2024 (1 Mart, 2024) tarihinde github dan indirilmek üzere yayımlanmıştır.
-* AdWMGUI'yi LinuxUsersLinuxMint web sitesinden indirmek için: https://linuxuserslinuxmint.github.io/Contents/adwmgui/STEP_2/TR/index.html
+---
 
-English:
+**AdWMGUI** is a *Windows Management GUI* software developed to facilitate system management and provide a user-friendly interface.  
+> 📅 Release date: **March 1, 2024**   
+> 📦 Initial release: **AdWMGUI 1.0 (GUI Beta)**   
+> 📦 Current version: **AdWMGUI 1.7**   
+> 📦 Next release: **AdWMGUI 1.8**   
+> ⏳ Next release status: **Under development...** 
+> 🛠️ Next release type: **Big update** 
 
-* AdWMGUI software was released for download from github on 03/01/2024 (March 1, 2024).
-* To download AdWMGUI from LinuxUsersLinuxMint website: https://linuxuserslinuxmint.github.io/Contents/adwmgui/STEP_2/EN/index.html
+---
+
+## 🖥️ Features
+
+- ✅ Makes Windows system cleaning and repair fast and practical
+- ✅ Light resource consumption, highly optimized
+- ✅ Multi-language support (Turkish and English)
+- 🔒 Protect your copy of AdWMGUI from unauthorized access by adding username and password. (**AdWMGUI will be available in version 1.8.**)
+
+---
