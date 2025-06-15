@@ -63,27 +63,6 @@ def set_resizability(resizability):
         config[window_name_y]['ysupportforresizability'] = "False"
         with open(CONFIG_PATH, 'w') as configfile:
             config.write(configfile)
-    
-
-def set_custom_resolution(custom_resolution):
-    global userCustomResolution,custom_res_input,custom_res_input_btn
-    userCustomResolution = custom_resolution
-    if custom_resolution == "on" or config['Settings']['customresolution'] == "True":
-        custom_resolution_status.config(text=custom_resolution_status_title+" "+on.lower())
-        custom_res_input = Text(window, width=15, height=1)
-        custom_res_input.place(x=5, y=410)
-        custom_res_input_btn = Button(window, text=custom_res_input_title, bg="#3a3a3a", fg="#dcdcdc", activebackground="#666666", activeforeground="#dcdcdc")
-        custom_res_input_btn.place(x=140, y=410)
-        config['Settings']['customresolution'] = "True"
-        with open(CONFIG_PATH, 'w') as configfile:
-            config.write(configfile)
-    elif custom_resolution == "off" or config['Settings']['customresolution'] == "False":
-        custom_resolution_status.config(text=custom_resolution_status_title+" "+off.lower())
-        custom_res_input.place_forget()
-        custom_res_input_btn.place_forget()
-        config['Settings']['customresolution'] = "False"
-        with open(CONFIG_PATH, 'w') as configfile:
-            config.write(configfile)
 
 def close(event=None):
     window.destroy()
@@ -138,14 +117,6 @@ def Settings():
     resizability_y_status.place(y=295)
     resizability_y_window_name = Entry(window, width=20)
     resizability_y_window_name.place(x=100, y=270)
-    custom_resolution_support = Label(window, text=custom_resolution_support_title, font=("Arial",12,"bold"), bg=label_bg, fg=label_fg)
-    custom_resolution_support.place(y=325)
-    custom_resolution_on = Button(window, text=on, bg=button_bg, fg=button_fg, activebackground=button_active_bg, activeforeground=button_active_fg, command=lambda: set_custom_resolution("on"))
-    custom_resolution_on.place(x=5, y=360)
-    custom_resolution_off  = Button(window, text=off, bg=button_bg, fg=button_fg, activebackground=button_active_bg, activeforeground=button_active_fg, command=lambda: set_custom_resolution("off"))
-    custom_resolution_off.place(x=40, y=360)
-    custom_resolution_status = Label(window, text=custom_resolution_status_title, bg=label_bg, fg=label_fg)
-    custom_resolution_status.place(y=385)
     if config['Theme']['usertheme'] == "dark":
         theme_status.config(text=theme_status_title+" "+dark_theme_title.lower())
     elif config['Theme']['usertheme'] == "light":
