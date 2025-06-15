@@ -9,9 +9,9 @@
 > 📅 Release date: **March 1, 2024**   
 > 📦 Initial release: **AdWMGUI 1.0 (GUI Beta)**   
 > 📦 Current version: **AdWMGUI 1.8**   
-> 📦 Next release: **AdWMGUI 1.9**   
+> 📦 Next release: **AdWMGUI 1.8.1**   
 > ⏳ Next release status: **It's not under development...**   
-> 🛠️ Next release type: **Appearance update**
+> 🛠️ Next release type: **Bug fix**
 
 ---
 
