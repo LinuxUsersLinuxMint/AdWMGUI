@@ -21,6 +21,7 @@ def About():
     window.geometry("500x500")
     window.resizable(resx,resy)
     window.configure(bg=window_bg)
+    window.iconbitmap("Icon/adwmgui_about.ico")
     about_label = Label(window, text=app_information_title, font=("Arial", 12, "bold"), anchor="w", justify=LEFT, bg=label_bg, fg=label_fg)
     about_label.pack(fill="x", anchor="w")
     app_name = Label(window, text=app_name_txt, anchor="w", justify=LEFT, bg=label_bg, fg=label_fg)

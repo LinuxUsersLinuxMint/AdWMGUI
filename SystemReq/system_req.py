@@ -8,8 +8,8 @@ A Copy of This Software is published on GitHub To view: https://github.com/Linux
 from AdWMGUILang.lang import *
 from Theme.theme import *
 
-#resx = config['SystemRequirements']['xsupportforresizability']
-#resy = config['SystemRequirements']['ysupportforresizability']
+resx = config['SysRequirements']['xsupportforresizability']
+resy = config['SysRequirements']['ysupportforresizability']
 
 def close(event=None):
     window.destroy()
