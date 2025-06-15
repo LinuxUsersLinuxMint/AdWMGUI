@@ -8,10 +8,10 @@
 **AdWMGUI** is a *Windows Management GUI* software developed to facilitate system management and provide a user-friendly interface.  
 > 📅 Release date: **March 1, 2024**   
 > 📦 Initial release: **AdWMGUI 1.0 (GUI Beta)**   
-> 📦 Current version: **AdWMGUI 1.8**   
-> 📦 Next release: **AdWMGUI 1.8.1**   
+> 📦 Current version: **AdWMGUI 1.8.1**   
+> 📦 Next release: **AdWMGUI 1.8.2**   
 > ⏳ Next release status: **It's not under development...**   
-> 🛠️ Next release type: **Bug fix**
+> 🛠️ Next release type: **Adding missing icons**
 
 ---
 
