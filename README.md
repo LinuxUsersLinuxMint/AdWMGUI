@@ -8,10 +8,10 @@
 **AdWMGUI** is a *Windows Management GUI* software developed to facilitate system management and provide a user-friendly interface.  
 > 📅 Release date: **March 1, 2024**   
 > 📦 Initial release: **AdWMGUI 1.0 (GUI Beta)**   
-> 📦 Current version: **AdWMGUI 1.7**   
-> 📦 Next release: **AdWMGUI 1.8**   
-> ⏳ Next release status: **Under development...**   
-> 🛠️ Next release type: **Big update** 
+> 📦 Current version: **AdWMGUI 1.8**   
+> 📦 Next release: **AdWMGUI 1.9**   
+> ⏳ Next release status: **It's not under development...**   
+> 🛠️ Next release type: **Appearance update**
 
 ---
 
@@ -20,6 +20,5 @@
 - ✅ Makes Windows system cleaning and repair fast and practical
 - ✅ Light resource consumption, highly optimized
 - ✅ Multi-language support (Turkish and English)
-- 🔒 Protect your copy of AdWMGUI from unauthorized access by adding username and password. (**AdWMGUI will be available in version 1.8.**)
 
 ---
