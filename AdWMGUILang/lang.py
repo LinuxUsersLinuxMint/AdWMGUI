@@ -7,47 +7,24 @@ A Copy of This Software is published on GitHub To view: https://github.com/Linux
 
 from tkinter import *
 from tkinter import font
+import configparser, os
 
-def set_tr():
-    global userLang
-    userLang = "TR"
-    lang.destroy()
+config = configparser.ConfigParser()
+config.read("Settings/settings.ini")
 
-def set_en():
-    global userLang
-    userLang = "EN"
-    lang.destroy()
+userLang = config['Language']['userlang']
 
-lang = Tk()
-lang.title("Select Language")
-lang.iconphoto(False, PhotoImage(file="Icon/adwmgui_icon.png"))
-lang.geometry("200x100")
-lang.resizable(FALSE,FALSE)
-lang_label = Label(lang, text="Select Language")
-lang_label.pack()
-btnfrm = Frame(lang)
-btnfrm.pack()
-lang_button_tr = Button(btnfrm, text="Türkçe",command=set_tr,width=10)
-lang_button_tr.pack(side=LEFT)
-lang_button_en = Button(btnfrm, text="English",command=set_en,width=10)
-lang_button_en.pack(side=LEFT)
-exit_button = Button(lang, text="Exit",command=lang.destroy,width=10)
-exit_button.pack()
-adwmgui_version_label = Label(lang,text="AdWMGUI v1.7", font=("Arial",10,"bold"))
-adwmgui_version_label.pack()
-lang.mainloop()
-
-if userLang == "EN":
+if userLang == "en":
     windows_title = "AdWMGUI (Advanced Windows Manager GUI)"
-    system_clean_title = "SystemClean"
+    system_clean_title = "System Clean"
     advanced_system_clean_title = "DISM WinSxS Folder clean"
-    system_repair_title = "SystemRepair"
+    system_repair_title = "System Repair"
     about_title = "About"
     shutdownpc_title = "Shutdown PC"
     all_operations_shutdownpc_title = "Do all operations and then shut down the computer"
     app_information_title = "App knowledge:\n"
     app_name_txt = "App name: AdWMGUI (Advanced Windows Manager GUI)"
-    app_version_txt = "Version: 1.7"
+    app_version_txt = "Version: 1.8"
     app_version_type_txt = "Version type: Stable version"
     licence_information_title = "Licence information:\n"
     licence_name_txt = "Licence name: GPL"
@@ -81,7 +58,57 @@ if userLang == "EN":
     private_time_title = "Private time (second):"
     private_time_button_title = "Shutdown PC"
     all_operations_shutdownpc_title_ = "Do all operations and then shut down the computer:"
-if userLang == "TR":
+    settings_title = "Settings"
+    theme_title = "Theme:"
+    dark_theme_title = "Dark"
+    light_theme_title = "Light"
+    language_title = "Language:"
+    language_en_title = "English"
+    language_tr_title = "Turkish"
+    theme_status_title = "Theme status:"
+    language_status_title = "Language status:"
+    sys_req_title = "System Requirements"
+    amoled_theme_title = "AMOLED Theme"
+    support_for_resizability_title = "Support for resizability:"
+    on = "On"
+    off = "Off"
+    resizability_status_title = "Resizability status:"
+    custom_resolution_support_title = "Custom resolution support:"
+    custom_resolution_status_title = "Custom resolution status:"
+    resizability_x_status_title = "Resize state for the X coordinate:"
+    resizability_y_status_title = "Resize state for the Y coordinate:"
+    custom_res_input_title = "Apply"
+    min_sys_req_title = "Minimum System Requirements"
+    rec_sys_req_title = "Recommended System Requirements"
+    os_req_title = "Operating System:"
+    cpu_req_title = "CPU:"
+    ram_req_title = "RAM:"
+    disk_type_title = "Disk type:"
+    disk_size_title = "Disk size:"
+    min_sys_req_os_title = "All versions of Windows 7 and above are supported"
+    min_sys_req_cpu_title = "An x64 architecture processor that meets Windows 7 and higher system requirements"
+    min_sys_req_ram_title = "20MB"
+    min_sys_req_disk_type_title = "HDD or SSD"
+    min_sys_req_disk_size_title = "25MB"
+    rec_sys_req_os_title = "Windows 10 and above"
+    rec_sys_req_cpu_title = "An x64 architecture processor that meets Windows 10 and higher system requirements"
+    rec_sys_req_ram_title = "30MB"
+    rec_sys_req_disk_type_title = "SSD"
+    rec_sys_req_disk_size_title = "30MB"
+    note_title = "NOTE: The app's system requirements may change with future updates."
+    note_two_title = "NOTE2: The system requirements of the application are based on the resources it uses."
+    adwmgui_agreement_error_title_txt = "AdWMGUI Software contract error"
+    adwmgui_agreement_error_txt = "Sorry! The software cannot be started because your AdWMGUI contract file does not exist or is not correct."
+    sysclean_tray_title = "Quick Clean"
+    sysclean_advanced_clean_title = "Advanced Clean"
+    open_title = "Open"
+    exit_title = "Exit"
+    basic_sys_repair_title = "Basic system repair:"
+    cleanmgr_success_title = "Quick Clean completed"
+    cleanmgr_fail_title = "cleanmgr.exe could not be started"
+    quick_clean_title = "Quick Clean:"
+    adv_clean_title = "Advanced Clean:"
+if userLang == "tr":
     windows_title = "AdWMGUI (Gelişmiş Windows Yönetimi GUI)"
     system_clean_title = "Sistem Temizliği"
     advanced_system_clean_title = "DISM WinSxS Klasör temizliği"
@@ -91,7 +118,7 @@ if userLang == "TR":
     all_operations_shutdownpc_title = "Tüm işlemleri yap ardından Bilgisayarı kapat"
     app_information_title = "Uygulama bilgisi:\n"
     app_name_txt = "Uygulama adı: AdWMGUI (Advanced Windows Manager GUI)"
-    app_version_txt = "Sürüm: 1.7"
+    app_version_txt = "Sürüm: 1.8"
     app_version_type_txt = "Sürüm tipi: Stabil sürüm"
     licence_information_title = "Lisans bilgisi:\n"
     licence_name_txt = "Lisans adı: GPL"
@@ -124,4 +151,54 @@ if userLang == "TR":
     quick_access_title = "Hızlı erişim:"
     private_time_title = "Özel zaman (saniye):"
     private_time_button_title = "Bilgisayarı kapat"
-    all_operations_shutdownpc_title_ = "Tüm islemleri yap ardından bilgisayarı kapat:"
+    all_operations_shutdownpc_title_ = "Tüm işlemleri yap ardından bilgisayarı kapat:"
+    settings_title = "Ayarlar"
+    theme_title = "Tema:"
+    dark_theme_title = "Karanlık"
+    light_theme_title = "Aydınlık"
+    language_title = "Dil:"
+    language_en_title = "Ingilizce"
+    language_tr_title = "Türkçe"
+    theme_status_title = "Tema durumu:"
+    language_status_title = "Dil durumu:"
+    sys_req_title = "Sistem gereksinimleri"
+    amoled_theme_title = "AMOLED Tema"
+    support_for_resizability_title = "Yeniden boyutlandırılabilirlik desteği:"
+    on = "Açık"
+    off = "Kapalı"
+    resizability_status_title = "Yeniden boyutlandırılabilirlik durumu:"
+    custom_resolution_support_title = "Özel çözünürlük destegi:"
+    custom_resolution_status_title = "Özel çözünürlük durumu:"
+    resizability_x_status_title = "X koordinatı için yeniden boyutlandırılabilirlik durumu:"
+    resizability_y_status_title = "Y koordinatı için yeniden boyutlandırılabilirlik durumu:"
+    custom_res_input_title = "Uygula"
+    min_sys_req_title = "Minimum Sistem Gereksinimleri"
+    rec_sys_req_title = "Önerilen Sistem Gereksinimleri"
+    os_req_title = "İşletim sistemi:"
+    cpu_req_title = "İşlemci:"
+    ram_req_title = "Bellek (RAM):"
+    disk_type_title = "Disk türü:"
+    disk_size_title = "Disk boyutu:"
+    min_sys_req_os_title = "Windows 7 ve üstü tüm sürümler desteklenir"
+    min_sys_req_cpu_title = "Windows 7 ve üstü sistem gereksinimlerini karşılayan x64 mimarisine sahip bir işlemci"
+    min_sys_req_ram_title = "20MB"
+    min_sys_req_disk_type_title = "HDD veya SSD"
+    min_sys_req_disk_size_title = "25MB"
+    rec_sys_req_os_title = "Windows 10 ve üstü"
+    rec_sys_req_cpu_title = "Windows 10 ve üstü sistem gereksinimlerini karşılayan x64 mimarisine sahip bir işlemci"
+    rec_sys_req_ram_title = "30MB"
+    rec_sys_req_disk_type_title = "SSD"
+    rec_sys_req_disk_size_title = "30MB"
+    note_title = "NOT: Uygulamanın sistem gereksinimleri ilerleyen güncellemelerle değişebilir."
+    note_two_title = "NOT2: Uygulamanın sistem gereksinimleri kullandığı kaynaklara göre belirlenmiştir."
+    adwmgui_agreement_error_title_txt = "AdWMGUI Yazılım sözleşmesi hatası"
+    adwmgui_agreement_error_txt = "Üzgünüm! AdWMGUI sözleşme dosyanız olmadığı için veya doğru olmadığı için yazılım başlatılamıyor."
+    sysclean_tray_title = "Hızlı temizlik"
+    sysclean_advanced_clean_title = "Gelişmiş temizlik"
+    open_title = "Aç"
+    exit_title = "Çıkış"
+    basic_sys_repair_title = "Basit sistem onarımı:"
+    cleanmgr_success_title = "Hızlı temizlik tamamlandı"
+    cleanmgr_fail_title = "cleanmgr.exe başlatılamadı"
+    quick_clean_title = "Hızlı temizlik:"
+    adv_clean_title = "Gelişmiş temizlik:"
