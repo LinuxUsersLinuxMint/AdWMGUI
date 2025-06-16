@@ -63,6 +63,7 @@ def SystemRepair():
     window.title(system_clean_title)
     window.geometry("500x300")
     window.resizable(resx,resy)
+    window.iconbitmap("Icon/adwmgui_system_repair.ico")
     window.configure(bg=window_bg)
     window.bind('<Control-w>', close)
     basic_sys_repair_label = Label(window, text=basic_sys_repair_title, anchor="w", justify=LEFT, font=("Arial", 12, "bold"), bg=label_bg, fg=label_fg)

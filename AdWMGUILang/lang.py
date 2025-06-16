@@ -7,7 +7,7 @@ A Copy of This Software is published on GitHub To view: https://github.com/Linux
 
 from tkinter import *
 from tkinter import font
-import configparser, os
+import configparser
 
 config = configparser.ConfigParser()
 config.read("Settings/settings.ini")
@@ -24,7 +24,7 @@ if userLang == "en":
     all_operations_shutdownpc_title = "Do all operations and then shut down the computer"
     app_information_title = "App knowledge:\n"
     app_name_txt = "App name: AdWMGUI (Advanced Windows Manager GUI)"
-    app_version_txt = "Version: 1.8.1"
+    app_version_txt = "Version: 1.8.2"
     app_version_type_txt = "Version type: Stable version"
     licence_information_title = "Licence information:\n"
     licence_name_txt = "Licence name: GPL"
@@ -118,7 +118,7 @@ if userLang == "tr":
     all_operations_shutdownpc_title = "Tüm işlemleri yap ardından Bilgisayarı kapat"
     app_information_title = "Uygulama bilgisi:\n"
     app_name_txt = "Uygulama adı: AdWMGUI (Advanced Windows Manager GUI)"
-    app_version_txt = "Sürüm: 1.8.1"
+    app_version_txt = "Sürüm: 1.8.2"
     app_version_type_txt = "Sürüm tipi: Stabil sürüm"
     licence_information_title = "Lisans bilgisi:\n"
     licence_name_txt = "Lisans adı: GPL"

@@ -5,7 +5,7 @@ AdWMGUI All Rights Reserved under the GPL(General Public License).
 Bu Yazılımın Bir Kopyası GitHub da yayınlanmaktadır Görüntülemek için: https://github.com/LinuxUsersLinuxMint/AdWMGUI
 A Copy of This Software is published on GitHub To view: https://github.com/LinuxUsersLinuxMint/AdWMGUI """
 
-import subprocess, threading
+import subprocess, threading, os
 from tkinter import *
 from tkinter import messagebox
 from AdWMGUILang.lang import *
@@ -78,6 +78,7 @@ def SystemClean():
     window.title(system_clean_title)
     window.geometry("500x300")
     window.resizable(resx,resy)
+    window.iconbitmap("Icon/adwmgui_system_clean.ico")
     window.configure(bg=window_bg)
     quick_clean_label = Label(window, text=quick_clean_title, font=("Arial",12,"bold"), anchor="w", justify=LEFT, bg=label_bg, fg=label_fg)
     quick_clean_label.pack(fill="x", anchor="w")

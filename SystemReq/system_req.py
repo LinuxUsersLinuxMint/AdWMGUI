@@ -20,6 +20,7 @@ def sys_req():
     window.title(sys_req_title)
     window.geometry("1400x700")
     window.configure(bg=window_bg)
+    window.iconbitmap("Icon/adwmgui_system_req.ico")
     window.resizable(FALSE,FALSE)
     sysreq_title = Label(window, text=sys_req_title, font=("Arial",12,"bold"), anchor="n", justify=LEFT, bg=label_bg, fg=label_fg)
     sysreq_title.pack(fill="x", anchor="w")

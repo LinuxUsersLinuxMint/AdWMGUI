@@ -33,6 +33,7 @@ def ShutdownPC():
         window.title(shutdownpc_title)
         window.geometry("500x500")
         window.resizable(resx,resy)
+        window.iconbitmap("Icon/adwmgui_shutdown_pc.ico")
         window.configure(bg=window_bg)
         quick_access = Label(window, text=quick_access_title, font=("Arial",12,"bold"), anchor="w", justify=LEFT, bg=label_bg, fg=label_fg)
         quick_access.pack(fill="x", anchor="w")
