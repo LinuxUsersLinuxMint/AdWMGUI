@@ -60,7 +60,7 @@ resy = config['SystemRepair']['ysupportforresizability']
 def SystemRepair():
     global window
     window = Tk()
-    window.title(system_clean_title)
+    window.title(system_repair_title)
     window.geometry("500x300")
     window.resizable(resx,resy)
     window.iconbitmap("Icon/adwmgui_system_repair.ico")
