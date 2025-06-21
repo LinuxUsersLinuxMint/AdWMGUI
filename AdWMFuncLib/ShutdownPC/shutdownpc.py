@@ -13,7 +13,7 @@ from tkinter import font
 from Theme.theme import *
 
 def get_input():
-            user_input = str(private_time_input.get("1.0", "end-1c"))
+            user_input = str(private_time_input.get())
             shutdownpc(user_input)
 
 def shutdownpc(second):
